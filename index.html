@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不用品回収・遺品整理なら満足度97.3%の専門業者へ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #333;
+        }
+        /* カラー定義 */
+        .main-blue { color: #1997e5; }
+        .bg-main-blue { background-color: #1997e5; }
+        .border-main-blue { border-color: #1997e5; }
+        
+        .sub-blue { color: #04439b; }
+        .bg-sub-blue { background-color: #04439b; }
+        
+        .accent-yellow { color: #f9fb2d; }
+        .bg-accent-yellow { background-color: #f9fb2d; }
+        .border-accent-yellow { border-color: #f9fb2d; }
+
+        .bg-light-blue { background-color: #f2f9ff; }
+
+        /* 見出しスタイル */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            line-height: 1.5;
+            color: #04439b; /* 紺色を適用 */
+        }
+        .section-title span {
+            display: block;
+            font-size: 1.25rem;
+            color: #1997e5;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .cta-button {
+            transition: opacity 0.3s ease;
+        }
+        .cta-button:hover {
+            opacity: 0.85;
+        }
+        .tel-number {
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div>
+                <img src="centervillage_h-logo.svg" alt="センタービレッジ" class="h-10 w-auto">
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-4 items-center text-sm font-bold">
+                <a href="#reasons" class="hover:text-main-blue">選ばれる理由</a>
+                <a href="#services" class="hover:text-main-blue">サービス</a>
+                <a href="#works" class="hover:text-main-blue">作業実績</a>
+                <a href="#reviews" class="hover:text-main-blue">お客様の声</a>
+                <a href="#pricing" class="hover:text-main-blue">料金プラン</a>
+                <a href="#contact" class="bg-main-blue text-white font-bold py-2 px-4 rounded-md cta-button">無料お見積もり</a>
+            </nav>
+
+            <!-- Mobile Nav Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#reasons" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">選ばれる理由</a>
+            <a href="#services" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">サービス内容</a>
+            <a href="#works" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">作業実績</a>
+            <a href="#reviews" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">お客様の声</a>
+            <a href="#pricing" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">料金プラン</a>
+            <a href="#flow" class="block text-center py-3 px-4 hover:bg-light-blue font-bold">ご利用の流れ</a>
+            <div class="p-4">
+                <a href="#contact" class="block w-full text-center py-3 px-4 mb-2 bg-main-blue text-white font-bold rounded-md cta-button">無料お見積もり</a>
+                <a href="tel:0120-123-456" class="block w-full text-center py-3 px-4 bg-accent-yellow text-gray-800 font-bold rounded-md cta-button">電話で相談</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ファーストビュー -->
+        <section>
+            <div>
+                <img src="top.jpg" alt="遺品整理・不用品回収でお悩みの方へ 地域最安値保証" class="w-full h-auto">
+            </div>
+            <div class="bg-white py-8">
+                <!-- CTAボックス -->
+                <div class="container mx-auto px-4">
+                    <div class="bg-white rounded-2xl shadow-2xl p-4 md:p-6 max-w-3xl mx-auto border-2 border-dashed border-main-blue">
+                        <p class="text-xl md:text-2xl font-bold main-blue mb-4 text-center">＼ 24時間365日 受付中！／</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <a href="#contact" class="w-full bg-main-blue text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                                <i class="fas fa-envelope mr-3"></i>WEBで無料見積もり
+                            </a>
+                            <a href="tel:0120-123-456" class="w-full bg-accent-yellow text-gray-800 font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                                <i class="fas fa-phone-alt mr-3"></i>電話で相談する
+                            </a>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-600 text-center">お見積もり・ご相談は無料です。お気軽にご連絡ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お悩み訴求 -->
+        <section id="problems" class="py-16 bg-light-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>こんなお悩みありませんか？</span>
+                    そのお悩み、<br class="md:hidden">私たちがすべて解決します！
+                </h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-main-blue text-white flex items-center justify-center mr-4 text-2xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">物が多すぎて手が付けられない</h3>
+                            <p class="text-sm text-gray-600">どこから片付ければいいか分からない、分別が面倒…。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-main-blue text-white flex items-center justify-center mr-4 text-2xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">重い家具・家電を処分したい</h3>
+                            <p class="text-sm text-gray-600">一人では運び出せないタンスや冷蔵庫を安全に処分したい。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-main-blue text-white flex items-center justify-center mr-4 text-2xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">故人の品を丁寧に整理したい</h3>
+                            <p class="text-sm text-gray-600">想いのこもった品々を、供養も含めてしっかり整理してほしい。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-main-blue text-white flex items-center justify-center mr-4 text-2xl">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">遠方の実家を片付けたい</h3>
+                            <p class="text-sm text-gray-600">時間がなくてなかなか帰れない実家の整理をお願いしたい。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 選ばれる理由 -->
+        <section id="reasons" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>年間実績3,000件以上！</span>
+                    私たちがお客さまに<br class="md:hidden">選ばれる理由
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-main-blue">
+                        <div class="text-5xl main-blue mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3 class="text-xl font-bold mb-2">業界最安値レベルの料金</h3>
+                        <p class="text-left text-sm">不用品の高価買取で作業費用を大幅に削減！お見積もり後の追加料金は一切ありません。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-main-blue">
+                        <div class="text-5xl main-blue mb-4"><i class="fas fa-shipping-fast"></i></div>
+                        <h3 class="text-xl font-bold mb-2">最短即日のスピード対応</h3>
+                        <p class="text-left text-sm">地域密着だからできる迅速な対応力。お急ぎの場合もご相談ください。24時間365日対応可能です。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-main-blue">
+                        <div class="text-5xl main-blue mb-4"><i class="fas fa-user-check"></i></div>
+                        <h3 class="text-xl font-bold mb-2">プロによる安心のサービス</h3>
+                        <p class="text-left text-sm">遺品整理士の資格を持つ専門スタッフが在籍。お客様の心に寄り添い、丁寧な作業をお約束します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス内容 -->
+        <section id="services" class="py-16 bg-light-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>サービス内容</span>
+                    不用品回収から遺品整理まで<br class="md:hidden">幅広く対応
+                </h2>
+                <div class="space-y-12">
+                    <div class="md:flex items-center gap-8 bg-white p-8 rounded-lg shadow-md">
+                        <img src="https://placehold.co/400x300/bae6fd/0284c7?text=不用品回収" alt="不用品回収" class="rounded-lg shadow-lg w-full md:w-1/3 mb-4 md:mb-0">
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold main-blue mb-2">不用品・粗大ゴミ回収</h3>
+                            <p class="mb-4">ご家庭で不要になった家具・家電製品から、オフィスや店舗の事業ゴミまで、1点から家一軒まるごと回収いたします。分別・梱包・搬出すべてスタッフにお任seください。</p>
+                            <span class="font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#引越し #大掃除 #ゴミ屋敷</span>
+                        </div>
+                    </div>
+                    <div class="md:flex flex-row-reverse items-center gap-8 bg-white p-8 rounded-lg shadow-md">
+                        <img src="https://placehold.co/400x300/bae6fd/0284c7?text=遺品整理" alt="遺品整理" class="rounded-lg shadow-lg w-full md:w-1/3 mb-4 md:mb-0">
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold main-blue mb-2">遺品整理・生前整理</h3>
+                            <p class="mb-4">故人様の大切な思い出の品を、ご遺族に代わって丁寧に整理します。遺品整理士が貴重品の捜索から不用品の分別、供養、清掃まで責任を持って行います。</p>
+                            <span class="font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">#遺品整理士在籍 #供養 #特殊清掃</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAバナー 1 -->
+        <div class="py-12 bg-light-blue">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-2xl shadow-2xl p-4 md:p-6 max-w-3xl mx-auto border-2 border-dashed border-main-blue">
+                    <p class="text-xl md:text-2xl font-bold main-blue mb-4 text-center">＼ 24時間365日 受付中！／</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="#contact" class="w-full bg-main-blue text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                            <i class="fas fa-envelope mr-3"></i>WEBで無料見積もり
+                        </a>
+                        <a href="tel:0120-123-456" class="w-full bg-accent-yellow text-gray-800 font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-3"></i>電話で相談する
+                        </a>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-600 text-center">お見積もり・ご相談は無料です。お気軽にご連絡ください。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 作業実績 -->
+        <section id="works" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>作業実績</span>
+                    ビフォーアフターをご覧ください！
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-center sub-blue mb-4">さいたま市 ゴミ屋敷清掃</h3>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div>
+                                <img src="https://placehold.co/400x300/fecaca/991b1b?text=Before" alt="作業前" class="w-full h-auto">
+                                <p class="text-center font-bold bg-red-100 text-red-700 py-2">Before</p>
+                            </div>
+                            <div>
+                                <img src="https://placehold.co/400x300/dcfce7/15803d?text=After" alt="作業後" class="w-full h-auto">
+                                <p class="text-center font-bold bg-green-100 text-green-700 py-2">After</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm">長年手付かずだったお部屋が、1日の作業でここまで綺麗になりました。お客様にも大変喜んでいただけました。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-center sub-blue mb-4">川口市 遺品整理</h3>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <div>
+                                <img src="https://placehold.co/400x300/fee2e2/b91c1c?text=Before" alt="作業前" class="w-full h-auto">
+                                <p class="text-center font-bold bg-red-100 text-red-700 py-2">Before</p>
+                            </div>
+                            <div>
+                                <img src="https://placehold.co/400x300/ccfbf1/0f766e?text=After" alt="作業後" class="w-full h-auto">
+                                <p class="text-center font-bold bg-green-100 text-green-700 py-2">After</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm">故人様の大切な品を一つひとつ丁寧に仕分け。ご遺族様の想いに寄り添い、心を込めて作業させていただきました。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の声 -->
+        <section id="reviews" class="py-16 bg-light-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>お客様の声</span>
+                    たくさんの「ありがとう」を<br class="md:hidden">いただいています！
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/64x64/fef08a/f59e0b?text=女性" class="rounded-full mr-4" alt="お客様">
+                            <div>
+                                <p class="font-bold">A様 (50代 女性)</p>
+                                <p class="text-sm text-gray-500">遺品整理</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="font-bold text-lg main-blue mb-2">"丁寧な対応に感動しました"</h4>
+                        <p class="text-sm">自分たちだけでは途方に暮れていたところ、親身に相談に乗っていただき、作業も迅速で本当に助かりました。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/64x64/fef08a/f59e0b?text=男性" class="rounded-full mr-4" alt="お客様">
+                            <div>
+                                <p class="font-bold">B様 (30代 男性)</p>
+                                <p class="text-sm text-gray-500">ゴミ屋敷の片付け</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="font-bold text-lg main-blue mb-2">"人生が変わりました！"</h4>
+                        <p class="text-sm">恥ずかしくて誰にも相談できませんでしたが、勇気を出してお願いして良かったです。スタッフの方が優しく、あっという間に綺麗になりました。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/64x64/fef08a/f59e0b?text=夫婦" class="rounded-full mr-4" alt="お客様">
+                            <div>
+                                <p class="font-bold">C様ご夫妻 (60代)</p>
+                                <p class="text-sm text-gray-500">不用品回収</p>
+                            </div>
+                        </div>
+                        <div class="text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <h4 class="font-bold text-lg main-blue mb-2">"買取もしてもらえてお得でした"</h4>
+                        <p class="text-sm">古い家具や家電をまとめて処分。思っていたよりも高く買い取ってもらえたので、費用をかなり抑えることができました。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 料金プラン -->
+        <section id="pricing" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>お部屋毎の目安料金</span>
+                    追加料金なし！明朗会計で安心
+                </h2>
+                <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden border border-gray-200">
+                    <div class="grid grid-cols-3 text-center font-bold text-white">
+                        <div class="bg-main-blue p-4">お部屋の間取り</div>
+                        <div class="bg-sub-blue p-4">作業時間</div>
+                        <div class="bg-main-blue p-4">税込み費用</div>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <!-- 1K -->
+                        <div class="grid grid-cols-3 text-center items-center">
+                            <div class="p-4 font-bold">1K</div>
+                            <div class="p-4 text-gray-700">1〜2時間</div>
+                            <div class="p-4 font-bold main-blue text-xl">10,000円〜</div>
+                        </div>
+                        <!-- 1LDK -->
+                        <div class="grid grid-cols-3 text-center items-center bg-light-blue">
+                            <div class="p-4 font-bold">1LDK</div>
+                            <div class="p-4 text-gray-700">2〜3時間</div>
+                            <div class="p-4 font-bold main-blue text-xl">15,000円〜</div>
+                        </div>
+                        <!-- 2LDK -->
+                        <div class="grid grid-cols-3 text-center items-center">
+                            <div class="p-4 font-bold">2LDK</div>
+                            <div class="p-4 text-gray-700">3〜4時間</div>
+                            <div class="p-4 font-bold main-blue text-xl">20,000円〜</div>
+                        </div>
+                        <!-- 3LDK -->
+                        <div class="grid grid-cols-3 text-center items-center bg-light-blue">
+                            <div class="p-4 font-bold">3LDK</div>
+                            <div class="p-4 text-gray-700">4〜5時間</div>
+                            <div class="p-4 font-bold main-blue text-xl">30,000円〜</div>
+                        </div>
+                        <!-- 4LDK -->
+                        <div class="grid grid-cols-3 text-center items-center">
+                            <div class="p-4 font-bold">4LDK</div>
+                            <div class="p-4 text-gray-700">5〜6時間</div>
+                            <div class="p-4 font-bold main-blue text-xl">40,000円〜</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-600 mt-6">※上記はあくまで目安です。物量や作業内容によって料金は変動いたします。正確な料金は無料お見積もりにてご確認ください。</p>
+            </div>
+        </section>
+
+        <!-- CTAバナー 2 -->
+        <div class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-2xl shadow-2xl p-4 md:p-6 max-w-3xl mx-auto border-2 border-dashed border-main-blue">
+                    <p class="text-xl md:text-2xl font-bold main-blue mb-4 text-center">＼ 24時間365日 受付中！／</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <a href="#contact" class="w-full bg-main-blue text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                            <i class="fas fa-envelope mr-3"></i>WEBで無料見積もり
+                        </a>
+                        <a href="tel:0120-123-456" class="w-full bg-accent-yellow text-gray-800 font-bold py-4 px-6 rounded-lg text-lg shadow-lg cta-button flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-3"></i>電話で相談する
+                        </a>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-600 text-center">お見積もり・ご相談は無料です。お気軽にご連絡ください。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ご利用の流れ -->
+        <section id="flow" class="py-16 bg-light-blue">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    <span>ご利用の流れ</span>
+                    お問い合わせから作業完了まで<br class="md:hidden">カンタン4ステップ
+                </h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 text-center relative">
+                    <!-- 矢印 -->
+                    <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 right-0 px-24">
+                        <div class="flex justify-around items-center">
+                           <i class="fas fa-arrow-right text-3xl text-gray-300"></i>
+                           <i class="fas fa-arrow-right text-3xl text-gray-300"></i>
+                           <i class="fas fa-arrow-right text-3xl text-gray-300"></i>
+                        </div>
+                    </div>
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="bg-main-blue text-white w-24 h-24 rounded-full flex flex-col justify-center items-center mx-auto mb-4 shadow-lg">
+                            <span class="text-sm">Step</span>
+                            <span class="text-4xl font-black">1</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">お問い合わせ</h3>
+                        <p class="text-sm text-left">お電話・WEBフォームからご連絡ください。状況を簡単にお伺いします。</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="bg-main-blue text-white w-24 h-24 rounded-full flex flex-col justify-center items-center mx-auto mb-4 shadow-lg">
+                            <span class="text-sm">Step</span>
+                            <span class="text-4xl font-black">2</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">無料お見積もり</h3>
+                        <p class="text-sm text-left">現地で状況を確認し、正確な料金を提示。出張費は無料です。</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="bg-main-blue text-white w-24 h-24 rounded-full flex flex-col justify-center items-center mx-auto mb-4 shadow-lg">
+                            <span class="text-sm">Step</span>
+                            <span class="text-4xl font-black">3</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">回収・整理作業</h3>
+                        <p class="text-sm text-left">ご契約後、ご指定の日時に専門スタッフが迅速・丁寧に作業します。</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative">
+                        <div class="bg-main-blue text-white w-24 h-24 rounded-full flex flex-col justify-center items-center mx-auto mb-4 shadow-lg">
+                            <span class="text-sm">Step</span>
+                            <span class="text-4xl font-black">4</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">ご確認・ご精算</h3>
+                        <p class="text-sm text-left">作業完了後、状態をご確認いただきお支払い。各種カードも利用可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section id="contact" class="py-16 bg-sub-blue text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-black mb-2">お問い合わせ・無料お見積もり</h2>
+                    <p>24時間365日受付中！どんな些細なことでもご相談ください。</p>
+                </div>
+                <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-2xl p-8">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-bold mb-1">お名前 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded">必須</span></label>
+                            <input type="text" id="name" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-bold mb-1">電話番号 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded">必須</span></label>
+                            <input type="tel" id="phone" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-bold mb-1">メールアドレス</label>
+                            <input type="email" id="email" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-bold mb-1">ご相談内容</label>
+                            <textarea id="message" rows="5" class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500" placeholder="お困りの状況、ご希望の作業日などをご記入ください。"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-accent-yellow text-gray-800 font-bold py-4 px-12 rounded-lg text-xl shadow-lg cta-button">
+                                この内容で無料見積もりを依頼する
+                            </button>
+                            <p class="text-xs mt-4 text-gray-500">個人情報の取り扱いについてはプライバシーポリシーをご確認ください。</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-sub-blue text-white">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <p class="mb-2">会社名：株式会社〇〇</p>
+            <p class="mb-4 text-sm text-gray-400">〒123-4567 東京都新宿区〇〇 1-2-3</p>
+            <p class="text-xs text-gray-500">&copy; 2024 不用品回収・遺品整理サービス. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    // ヘッダーの高さを考慮してスクロール
+                    const headerOffset = 70;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // モバイルメニューのトグル
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // リンククリック時にメニューを閉じる
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
