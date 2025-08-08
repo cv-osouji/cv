@@ -123,14 +123,10 @@
         <!-- ファーストビュー -->
         <section>
             <div>
-                <picture>
-                    <!-- 767px以下の画面幅で表示 -->
-                    <source srcset="top-small.svg" media="(max-width: 767px)">
-                    <!-- 768px以上の画面幅で表示 -->
-                    <source srcset="top.jpg" media="(min-width: 768px)">
-                    <!-- デフォルトの画像 -->
-                    <img src="top.jpg" alt="遺品整理・不用品回収でお悩みの方へ 地域最安値保証" class="w-full h-auto">
-                </picture>
+                <!-- PC・タブレット用画像 (768px以上で表示) -->
+                <img src="top.jpg" alt="遺品整理・不用品回収でお悩みの方へ 地域最安値保証" class="w-full h-auto hidden md:block">
+                <!-- スマートフォン用画像 (767px以下で表示) -->
+                <img src="top-small.jpg" alt="遺品整理・不用品回収でお悩みの方へ 地域最安値保証" class="w-full h-auto md:hidden">
             </div>
             <div class="bg-white py-8">
                 <!-- CTAボックス -->
