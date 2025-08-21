@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cv-osouji.github.io/cv/sitemap.xml
