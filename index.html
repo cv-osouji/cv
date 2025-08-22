@@ -679,46 +679,42 @@
         </div>
         </section>
 
-<!-- お問い合わせフォーム -->
 <section id="contact" class="py-16 bg-sub-blue text-white">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-8">
-      <h2 class="text-3xl font-black mb-2">お問い合わせ・無料お見積もり</h2>
-      <p>24時間365日受付中！どんな些細なことでもご相談ください。</p>
-    </div>
+<div class="container mx-auto px-4">
+<div class="text-center mb-8">
+<h2 class="text-3xl font-black mb-2">お問い合わせ・無料お見積もり</h2>
+<p>24時間365日受付中！どんな些細なことでもご相談ください。</p>
+</div>
 
-    <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-2xl p-8">
-      <!-- Contact Form (StaticForms modern schema + reCAPTCHA) -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<form action="https://api.staticforms.xyz/submit" method="post" autocomplete="off" class="space-y-4" id="contact-form">
-  <!-- Visible fields -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input type="text"  name="name"   placeholder="お名前" required class="w-full border rounded-lg p-3">
-    <input type="tel"   name="phone"  placeholder="電話番号" required class="w-full border rounded-lg p-3">
-    <input type="email" id="email" name="email" placeholder="メールアドレス" class="w-full border rounded-lg p-3 md:col-span-2">
-  </div>
-  <textarea name="message" rows="5" placeholder="ご相談内容" class="w-full border rounded-lg p-3"></textarea>
 
-  <!-- Required/Recommended hidden fields -->
-  <input type="hidden" name="apiKey"     value="sf_1djdinb55cc6i39ch3014njh">
-  <input type="hidden" name="subject"    value="サイトからのお問い合わせ">
-  <input type="hidden" name="replyTo"    value="@">
-  <input type="hidden" name="redirectTo" value="https://cv-osouji.github.io/cv/thanks.html">
+<div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-2xl p-8">
+<!-- Contact Form (Formspree版) -->
+<form action="https://formspree.io/f/yourFormID" method="POST" autocomplete="off" class="space-y-4" id="contact-form">
+<!-- Visible fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<input type="text" name="name" placeholder="お名前" required class="w-full border rounded-lg p-3">
+<input type="tel" name="phone" placeholder="電話番号" required class="w-full border rounded-lg p-3">
+<input type="email" name="email" placeholder="メールアドレス" required class="w-full border rounded-lg p-3 md:col-span-2">
+</div>
+<textarea name="message" rows="5" placeholder="ご相談内容" class="w-full border rounded-lg p-3" required></textarea>
 
-  <!-- reCAPTCHA (required by StaticForms anti-spam) -->
-  <div class="g-recaptcha" data-sitekey="6LerTa0rAAAAADFzMziUa5Xaysmfr7iCzrTDlgrM"></div>
 
-  <!-- Honeypot -->
-  <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+<!-- Optional hidden fields -->
+<input type="hidden" name="_subject" value="サイトからのお問い合わせ">
+<input type="hidden" name="_redirect" value="https://cv-osouji.github.io/cv/thanks.html">
 
-  <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
-    この内容で無料見積もりを依頼する
-  </button>
+
+<!-- Honeypot -->
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+
+<button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105">
+この内容で無料見積もりを依頼する
+</button>
 </form>
-    </div>
-  </div>
-</section>
-    
+</div>
+</div>
+</section>    
 
     </main>
 
