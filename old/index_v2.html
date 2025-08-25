@@ -36,7 +36,7 @@
   ]
 }
 </script>
-
+<title>不用品回収・遺品整理なら満足度97.3%の専門業者へ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -152,9 +152,7 @@
     </header>
 
     <!-- メインコンテンツ -->
-    
-<h1 class="sr-only">埼玉の不用品回収・遺品整理｜24時間365日対応｜センタービレッジ</h1>
-<main>
+    <main>
         <!-- ファーストビュー -->
         <section>
             <div>
@@ -688,46 +686,68 @@
     </div>
 
     <div class="max-w-2xl mx-auto bg-white text-gray-800 rounded-xl shadow-2xl p-8">
-      <!-- Contact Form (StaticForms modern schema + reCAPTCHA) -->
-<!-- すでにページ上部に入っているなら重複不要 -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <form action="https://api.staticforms.xyz/submit" method="post" autocomplete="off">
+        <!-- APIキー（公開用） -->
+        <input type="hidden" name="accessKey" value="sf_1djdinb55cc6i39ch3014njh">
 
-<form action="https://formspree.io/f/myzprnyd" method="POST"
-      autocomplete="off" class="space-y-4" id="contact-form" accept-charset="UTF-8">
-  <!-- 入力欄 -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input type="text"  name="name"   placeholder="お名前" required class="w-full border rounded-lg p-3">
-    <input type="tel"   name="phone"  placeholder="電話番号" required class="w-full border rounded-lg p-3">
-    <input type="email" id="email" name="email" placeholder="メールアドレス" class="w-full border rounded-lg p-3 md:col-span-2">
-  </div>
-  <textarea name="message" rows="5" placeholder="ご相談内容" class="w-full border rounded-lg p-3"></textarea>
+        <!-- 送信先メール（複数可：カンマ区切り）-->
+        <input type="hidden" name="recipient" value="info@happy-mo.com , nakamurahidehiro19921123@gmail.com ">
 
-  <!-- 通知メールの件名（任意） -->
-  <input type="hidden" name="_subject" value="サイトからのお問い合わせ">
-  <!-- 送信完了後の遷移先（無料プランでも使えるフォールバック） -->
+        <!-- 件名（任意）-->
+        <input type="hidden" name="subject" value="サイトからのお問い合わせ">
+
+        <!-- 返信先にユーザーのアドレスを使う設定（任意）-->
+        <input type="hidden" name="replyTo" value="@fromEmail">
+
+        <!-- 送信後のリダイレクト先（任意。固定ページがあれば差し替え）-->
+        <!-- <input type="hidden" name="redirectTo" value="https://example.com/thanks.html"> -->
+
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-bold mb-1">
+            お名前 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded">必須</span>
+          </label>
+          <input type="text" id="name" name="name"
+                 class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500"
+                 required>
+        </div>
+
+        <div class="mb-4">
+          <label for="phone" class="block text-sm font-bold mb-1">
+            電話番号 <span class="bg-red-500 text-white text-xs px-2 py-0.5 rounded">必須</span>
+          </label>
+          <input type="tel" id="phone" name="phone"
+                 class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500"
+                 required>
+        </div>
+
+        <div class="mb-4">
+          <label for="fromEmail" class="block text-sm font-bold mb-1">メールアドレス</label>
+          <input type="email" id="fromEmail" name="fromEmail"
+                 class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="mb-6">
+          <label for="message" class="block text-sm font-bold mb-1">ご相談内容</label>
+          <textarea id="message" name="message" rows="5"
+                    class="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-500"
+                    placeholder="お困りの状況、ご希望の作業日などをご記入ください。"></textarea>
+        </div>
+
+        <!-- Honeypot（スパム対策用の隠しフィールド）-->
+        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="text-center">
+          <button type="submit"
+                  class="w-full bg-accent-yellow text-gray-800 font-bold py-4 px-12 rounded-lg text-xl shadow-lg cta-button">
+            この内容で無料見積もりを依頼する
+          </button>
+          <p class="text-xs mt-4 text-gray-500">
+            個人情報の取り扱いについてはプライバシーポリシーをご確認ください。
+          </p>
+        </div>
+      
   <input type="hidden" name="_next" value="https://cv-osouji.github.io/cv/thanks.html">
-
-  <!-- reCAPTCHA v2（サイトキーはそのまま使える） -->
-  <div class="g-recaptcha" data-sitekey="6LcrLK8rAAAAALGD4dyE2Wk77TDl9T5gignIcBIl"></div>
-
-  <!-- 蜘蛛の巣（スパム対策のダミー入力） -->
-  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-  <button type="submit"
-    class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
-    この内容で無料見積もりを依頼する
-  </button>
 </form>
-
-<!-- reCAPTCHA 未チェック時のガード（任意） -->
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(e){
-  if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length === 0) {
-    e.preventDefault();
-    alert('reCAPTCHA を完了してください');
-  }
-});
-</script>
     </div>
   </div>
 </section>
