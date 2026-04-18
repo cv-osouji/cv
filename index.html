@@ -44,12 +44,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* stickyを効かせるため、html/bodyのoverflow設定を調整 */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
             font-family: 'Noto Sans JP', sans-serif;
             color: #333;
-            overflow-x: hidden;
             -webkit-text-size-adjust: 100%;
+            /* overflow-x: hiddenを直接bodyに書くとstickyが壊れることがあるため、必要ならコンテナにかける */
         }
+
         /* カラー定義 */
         .main-blue { color: #1997e5; }
         .bg-main-blue { background-color: #1997e5; }
@@ -123,12 +131,20 @@
             max-height: 0;
             overflow: hidden;
         }
+
+        /* 画像の強制全幅設定 */
+        .full-width-image {
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: none !important;
+            display: block !important;
+        }
     </style>
 </head>
 <body class="bg-white">
 
-    <!-- ヘッダー -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- ヘッダー：追尾されるように sticky top-0 を維持し、z-indexを強化 -->
+    <header class="bg-white shadow-md sticky top-0 z-[100] w-full">
         <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="centervillage_h-logo.svg" alt="センタービレッジ" class="h-9 md:h-12 w-auto">
@@ -153,7 +169,7 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[60] p-6 overflow-y-auto">
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[110] p-6 overflow-y-auto">
             <div class="flex justify-between items-center mb-10">
                 <img src="centervillage_h-logo.svg" alt="ロゴ" class="h-8 w-auto">
                 <button id="close-menu" class="text-3xl text-gray-400 p-2"><i class="fas fa-times"></i></button>
@@ -165,24 +181,25 @@
                 <a href="#faq" class="menu-link py-2 border-b border-gray-100">よくあるご質問</a>
                 <div class="pt-6 space-y-4">
                     <a href="#contact" class="block bg-main-blue text-white py-4 rounded-xl shadow-md">無料見積もりを依頼する</a>
-                    <a href="https://line.me" class="block bg-line-green text-white py-4 rounded-xl shadow-md"><i class="fab fa-line mr-2"></i>LINEで写真査定</a>
+                    <a href="https://lin.ee/jtCaPLIi" class="block bg-line-green text-white py-4 rounded-xl shadow-md"><i class="fab fa-line mr-2"></i>LINEで写真査定</a>
                     <a href="tel:08035557226" class="block bg-accent-yellow text-gray-800 py-4 rounded-xl shadow-md"><i class="fas fa-phone-alt mr-2"></i>電話で相談する</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <main>
+    <!-- メインコンテンツ -->
+    <main class="w-full">
         <!-- ファーストビュー -->
-        <section class="relative bg-white">
-            <picture>
+        <section class="w-full relative overflow-hidden bg-white">
+            <picture class="block w-full">
                 <source srcset="top-01.svg" media="(min-width: 768px)">
-                <!-- スマホ用。画像の下に実績を配置するため、ここでは画像のみ -->
-                <img src="top-small-01.svg" alt="埼玉の不用品回収・お部屋の片付け" class="w-full h-auto block">
+                <!-- クラス full-width-image を適用し、強制的に左右を埋める -->
+                <img src="top-small-01.svg" alt="埼玉の不用品回収・お部屋の片付け" class="full-width-image h-auto m-0 p-0 border-none shadow-none">
             </picture>
             
-            <!-- 実績バッジ - スマホでは画像の下に、PCでは画像に被らない位置に配置 -->
-            <div class="bg-white py-6 md:py-8 border-b border-gray-50">
+            <!-- 実績バッジ - 画像の下に配置 -->
+            <div class="bg-white py-6 md:py-8 border-b border-gray-50 w-full">
                 <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16">
                     <div class="flex items-center justify-center w-full md:w-auto">
                         <span class="bg-red-500 text-white text-[10px] md:text-sm font-bold px-2 py-1 rounded-sm mr-3">顧客満足度</span>
@@ -213,7 +230,7 @@
                                     <p class="text-lg font-black text-gray-800">080-3555-7226</p>
                                 </div>
                             </a>
-                            <a href="https://line.me" class="flex flex-row md:flex-col items-center justify-center bg-line-green text-white p-4 rounded-xl cta-button shadow-sm">
+                            <a href="https://lin.ee/jtCaPLIi" class="flex flex-row md:flex-col items-center justify-center bg-line-green text-white p-4 rounded-xl cta-button shadow-sm">
                                 <i class="fab fa-line text-3xl md:mb-2 mr-4 md:mr-0"></i>
                                 <div class="text-left md:text-center">
                                     <p class="text-[10px] font-bold opacity-90">写真を送るだけ</p>
@@ -544,7 +561,7 @@
 
     <!-- スマホ専用固定CTAフッター -->
     <div class="mobile-floating-cta lg:hidden">
-        <a href="https://line.me" class="flex-1 bg-line-green text-white py-3 rounded-lg font-black flex flex-col items-center justify-center shadow-md">
+        <a href="https://lin.ee/jtCaPLIi" class="flex-1 bg-line-green text-white py-3 rounded-lg font-black flex flex-col items-center justify-center shadow-md">
             <span class="text-[9px] mb-0.5 opacity-90 font-bold">最短1分！写真査定</span>
             <span class="text-sm"><i class="fab fa-line mr-1 text-base"></i>LINE相談</span>
         </a>
@@ -586,7 +603,12 @@
 
         const toggleMenu = () => {
             mobileMenu.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden'); // 背景固定
+            // メニューが開いているときは背景のスクロールを止める
+            if (!mobileMenu.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         };
 
         menuBtn.addEventListener('click', toggleMenu);
