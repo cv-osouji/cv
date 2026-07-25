@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>埼玉の不用品回収・お部屋の片付け｜24時間対応・見積り0円｜センタービレッジ</title>
-    <meta name="description" content="【満足度97.3%】埼玉県内の不用品回収、お部屋の整理はセンタービレッジ. 最短即日／土日祝OK。出張見積り0円。LINE・電話相談も歓迎。">
+    <meta name="description" content="【満足度97.3%】埼玉県内の不用品回収、ゴミ屋敷・特殊清掃、遺品整理はセンタービレッジ。最短30分駆けつけ！出張見積り0円。24時間365日電話・LINE受付中。">
     <link rel="canonical" href="https://cv-osouji.github.io/cv/">
 
     <!-- Google サーチコンソール用 -->
@@ -13,7 +13,7 @@
 
     <!-- OGP / Twitter -->
     <meta property="og:title" content="埼玉の不用品回収・お部屋の片付け｜センタービレッジ">
-    <meta property="og:description" content="最短即日／土日祝OK。出張見積り0円。">
+    <meta property="og:description" content="関東地区 24時間365日対応！ゴミ屋敷・特殊清掃・遺品整理・不用品回収ならお任せください。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cv-osouji.github.io/cv/">
     <meta name="twitter:card" content="summary_large_image">
@@ -25,14 +25,14 @@
       "name":"センタービレッジ",
       "parentOrganization":{"@type":"Organization","name":"（株）NHホールディングス"},
       "url":"https://cv-osouji.github.io/cv/",
-      "telephone":"+81-80-3555-7226",
+      "telephone":"0120-546-207",
       "address":{
         "@type":"PostalAddress",
         "postalCode":"348-0053",
         "addressRegion":"埼玉県",
         "addressLocality":"羽生市南7-19-11"
       },
-      "areaServed":"埼玉県",
+      "areaServed":["埼玉県", "東京都", "千葉県", "神奈川県"],
       "openingHoursSpecification":[
         {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}
       ]
@@ -44,7 +44,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* stickyを効かせるため、html/bodyのoverflow設定を調整 */
         html {
             scroll-behavior: smooth;
         }
@@ -53,29 +52,37 @@
             padding: 0;
             width: 100%;
             font-family: 'Noto Sans JP', sans-serif;
-            color: #333;
+            color: #1e293b;
+            background-color: #f8fafc;
             -webkit-text-size-adjust: 100%;
-            /* overflow-x: hiddenを直接bodyに書くとstickyが壊れることがあるため、必要ならコンテナにかける */
         }
 
-        /* カラー定義 */
-        .main-blue { color: #1997e5; }
-        .bg-main-blue { background-color: #1997e5; }
-        .sub-blue { color: #04439b; }
-        .bg-sub-blue { background-color: #04439b; }
+        /* 明るく洗練されたカラー定義 */
+        .bg-light-sky {
+            background: linear-gradient(180deg, #edf5ff 0%, #f8fafc 100%);
+        }
+        .bg-blue-gradient {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+        }
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #eab308 100%);
+        }
+        .bg-red-gradient {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+        .text-royal-blue {
+            color: #0369a1;
+        }
         .bg-line-green { background-color: #06C755; }
-        .accent-yellow { color: #f9fb2d; }
-        .bg-accent-yellow { background-color: #f9fb2d; }
-        .bg-light-blue { background-color: #f2f9ff; }
 
-        /* セクションタイトル - スマホ向けにサイズ最適化 */
+        /* セクションタイトル */
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 900;
             text-align: center;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-            color: #04439b;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+            color: #0f172a;
         }
         @media (min-width: 768px) {
             .section-title { font-size: 2.5rem; }
@@ -83,12 +90,51 @@
         .section-title span {
             display: block;
             font-size: 0.875rem;
-            color: #1997e5;
+            color: #0284c7;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             letter-spacing: 0.1em;
         }
 
+        /* 光る輝きアニメーション */
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                60deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.4) 50%,
+                transparent 70%
+            );
+            transform: rotate(30deg);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translate(-100%, -100%) rotate(30deg); }
+            20% { transform: translate(100%, 100%) rotate(30deg); }
+            100% { transform: translate(100%, 100%) rotate(30deg); }
+        }
+
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            touch-action: manipulation;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+        
         /* アニメーション */
         .scroll-animate {
             opacity: 0;
@@ -100,17 +146,7 @@
             transform: translateY(0);
         }
 
-        /* ボタン・装飾 */
-        .cta-button {
-            transition: all 0.3s ease;
-            touch-action: manipulation;
-        }
-        .cta-button:active {
-            transform: scale(0.98);
-            filter: brightness(0.9);
-        }
-        
-        /* スマホ用固定フッター - 指が届きやすいサイズに */
+        /* スマホ用固定フッター */
         .mobile-floating-cta {
             position: fixed;
             bottom: 0;
@@ -118,51 +154,61 @@
             right: 0;
             z-index: 100;
             display: flex;
-            padding: 10px;
-            gap: 10px;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+            padding: 8px 10px;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 2px solid #facc15;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         }
 
-        /* FAQ */
+        /* FAQ アコーディオン */
         .faq-content {
             transition: max-height 0.3s ease-out;
             max-height: 0;
             overflow: hidden;
         }
-
-        /* 画像の強制全幅設定 */
-        .full-width-image {
-            width: 100% !important;
-            min-width: 100% !important;
-            max-width: none !important;
-            display: block !important;
-        }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-slate-50 text-slate-800">
 
-    <!-- ヘッダー：追尾されるように sticky top-0 を維持し、z-indexを強化 -->
-    <header class="bg-white shadow-md sticky top-0 z-[100] w-full">
-        <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+    <!-- ヘッダー：爽やかな白＆ゴールドで超目立つ電話番号バーメニュー -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-amber-200 shadow-md sticky top-0 z-[100] w-full">
+        <div class="container mx-auto px-3 md:px-6 py-2.5 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="centervillage_h-logo.svg" alt="センタービレッジ" class="h-9 md:h-12 w-auto">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="centervillage_h-logo.svg" alt="センタービレッジ" class="h-9 md:h-11 w-auto">
+                </a>
             </div>
             
-            <nav class="hidden lg:flex space-x-6 items-center text-sm font-bold text-gray-700">
-                <a href="#reasons" class="hover:text-main-blue">選ばれる理由</a>
-                <a href="#works" class="hover:text-main-blue">実績</a>
-                <a href="#pricing" class="hover:text-main-blue">料金</a>
-                <a href="#faq" class="hover:text-main-blue">よくあるご質問</a>
-                <a href="#contact" class="bg-main-blue text-white py-2 px-6 rounded-full cta-button">無料見積もり</a>
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden lg:flex space-x-6 items-center text-sm font-bold text-slate-700">
+                <a href="#reasons" class="hover:text-sky-600 transition-colors">選ばれる理由</a>
+                <a href="#works" class="hover:text-sky-600 transition-colors">実績</a>
+                <a href="#pricing" class="hover:text-sky-600 transition-colors">料金</a>
+                <a href="#faq" class="hover:text-sky-600 transition-colors">よくあるご質問</a>
+                
+                <!-- PC用 超目立つゴールデン電話ボタン -->
+                <a href="tel:0120546207" class="shine-effect flex items-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 py-1.5 px-5 rounded-full font-black shadow-md border border-yellow-200 transform hover:scale-105 transition-all">
+                    <i class="fas fa-phone-alt text-xl mr-2.5 text-red-600 animate-pulse"></i>
+                    <div class="text-left leading-tight">
+                        <span class="text-[9px] font-bold block text-slate-800 tracking-tight">【通話料無料】24時間365日受付</span>
+                        <span class="text-xl md:text-2xl font-black tracking-tight text-slate-950">0120-546-207</span>
+                    </div>
+                </a>
+
+                <a href="#contact" class="bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white py-2.5 px-5 rounded-full cta-button shadow-md font-bold text-xs tracking-wider">
+                    無料見積もり
+                </a>
             </nav>
 
-            <div class="lg:hidden flex items-center gap-3">
-                <a href="tel:08035557226" class="bg-accent-yellow text-gray-800 h-10 px-4 rounded-full flex items-center justify-center font-bold text-sm shadow-sm">
-                    <i class="fas fa-phone-alt mr-2"></i>電話
+            <!-- スマホ用ヘッダー -->
+            <div class="lg:hidden flex items-center gap-2">
+                <a href="tel:0120546207" class="bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 h-10 px-3 rounded-full flex items-center justify-center font-black text-xs shadow-sm border border-yellow-200">
+                    <i class="fas fa-phone-alt text-red-600 mr-1.5 animate-pulse"></i>
+                    <span class="tracking-tighter">0120-546-207</span>
                 </a>
-                <button id="mobile-menu-button" class="text-gray-700 w-10 h-10 flex items-center justify-center">
+                <button id="mobile-menu-button" class="text-sky-700 w-10 h-10 flex items-center justify-center focus:outline-none" aria-label="メニューを開く">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -170,19 +216,22 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-[110] p-6 overflow-y-auto">
-            <div class="flex justify-between items-center mb-10">
+            <div class="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
                 <img src="centervillage_h-logo.svg" alt="ロゴ" class="h-8 w-auto">
-                <button id="close-menu" class="text-3xl text-gray-400 p-2"><i class="fas fa-times"></i></button>
+                <button id="close-menu" class="text-3xl text-slate-400 p-2"><i class="fas fa-times"></i></button>
             </div>
-            <div class="flex flex-col space-y-5 text-center text-lg font-bold">
-                <a href="#reasons" class="menu-link py-2 border-b border-gray-100">選ばれる理由</a>
-                <a href="#works" class="menu-link py-2 border-b border-gray-100">作業実績</a>
-                <a href="#pricing" class="menu-link py-2 border-b border-gray-100">料金プラン</a>
-                <a href="#faq" class="menu-link py-2 border-b border-gray-100">よくあるご質問</a>
-                <div class="pt-6 space-y-4">
-                    <a href="#contact" class="block bg-main-blue text-white py-4 rounded-xl shadow-md">無料見積もりを依頼する</a>
-                    <a href="https://lin.ee/jtCaPLIi" class="block bg-line-green text-white py-4 rounded-xl shadow-md"><i class="fab fa-line mr-2"></i>LINEで写真査定</a>
-                    <a href="tel:08035557226" class="block bg-accent-yellow text-gray-800 py-4 rounded-xl shadow-md"><i class="fas fa-phone-alt mr-2"></i>電話で相談する</a>
+            <div class="flex flex-col space-y-4 text-center text-lg font-bold text-slate-800">
+                <a href="#reasons" class="menu-link py-2 border-b border-slate-100">選ばれる理由</a>
+                <a href="#works" class="menu-link py-2 border-b border-slate-100">作業実績</a>
+                <a href="#pricing" class="menu-link py-2 border-b border-slate-100">料金プラン</a>
+                <a href="#faq" class="menu-link py-2 border-b border-slate-100">よくあるご質問</a>
+                <div class="pt-4 space-y-3">
+                    <a href="tel:0120546207" class="block bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 py-4 rounded-xl shadow-md border border-yellow-200 text-center">
+                        <span class="text-xs text-slate-800 block font-bold mb-0.5">【通話料無料】24時間365日受付</span>
+                        <span class="text-2xl font-black text-slate-950"><i class="fas fa-phone-alt text-red-600 mr-2"></i>0120-546-207</span>
+                    </a>
+                    <a href="https://lin.ee/jtCaPLIi" class="block bg-line-green text-white py-4 rounded-xl shadow-md text-base font-bold"><i class="fab fa-line mr-2 text-xl"></i>LINEで写真査定</a>
+                    <a href="#contact" class="block bg-gradient-to-r from-sky-600 to-blue-700 text-white py-4 rounded-xl shadow-md text-base font-bold">WEB無料見積もり</a>
                 </div>
             </div>
         </div>
@@ -190,153 +239,145 @@
 
     <!-- メインコンテンツ -->
     <main class="w-full">
-        <!-- ファーストビュー -->
-        <section class="w-full relative overflow-hidden bg-white">
-            <picture class="block w-full">
-                <source srcset="top-01.svg" media="(min-width: 768px)">
-                <!-- クラス full-width-image を適用し、強制的に左右を埋める -->
-                <img src="top-small-01.svg" alt="埼玉の不用品回収・お部屋の片付け" class="full-width-image h-auto m-0 p-0 border-none shadow-none">
-            </picture>
-            
-            <!-- 実績バッジ - 画像の下に配置 -->
-            <div class="bg-white py-6 md:py-8 border-b border-gray-50 w-full">
-                <div class="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-16">
-                    <div class="flex items-center justify-center w-full md:w-auto">
-                        <span class="bg-red-500 text-white text-[10px] md:text-sm font-bold px-2 py-1 rounded-sm mr-3">顧客満足度</span>
-                        <span class="text-3xl md:text-4xl font-black sub-blue leading-none">97.3<small class="text-sm ml-1">%</small></span>
-                    </div>
-                    <div class="w-px h-6 bg-gray-200 hidden md:block"></div>
-                    <div class="flex items-center justify-center w-full md:w-auto">
-                        <span class="bg-red-500 text-white text-[10px] md:text-sm font-bold px-2 py-1 rounded-sm mr-3">年間実績</span>
-                        <span class="text-3xl md:text-4xl font-black sub-blue leading-none">3,000<small class="text-sm ml-1">件以上</small></span>
-                    </div>
-                </div>
+        <!-- ファーストビュー（FV）- テロップはなし、画像メインで美しく表示 -->
+        <section class="relative w-full bg-slate-100 shadow-sm border-b border-slate-200">
+            <div class="w-full mx-auto">
+                <picture class="block w-full">
+                    <source srcset="top-01.png" media="(min-width: 768px)">
+                    <img src="top-01.png" alt="関東地区 24時間365日対応 ゴミ屋敷 特殊清掃 遺品整理 不用品回収 センタービレッジ" class="w-full h-auto block mx-auto object-cover">
+                </picture>
             </div>
         </section>
 
-        <!-- スマホ優先メインCTA -->
-        <section class="py-8 bg-white">
+        <!-- メインコンバージョンエリア -->
+        <section class="py-8 bg-sky-50/50">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden">
-                    <div class="bg-main-blue text-white text-center py-3 text-sm font-bold italic">
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl p-6 md:p-8 border-2 border-amber-300 shadow-xl relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs md:text-sm font-black px-6 py-1.5 rounded-full shadow-md">
                         ＼ 24時間365日受付！最短30分で急行 ／
                     </div>
-                    <div class="p-5 md:p-10">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                            <a href="tel:08035557226" class="flex flex-row md:flex-col items-center justify-center bg-accent-yellow p-4 rounded-xl cta-button shadow-sm">
-                                <i class="fas fa-phone-alt text-2xl md:mb-2 mr-4 md:mr-0 text-gray-800"></i>
-                                <div class="text-left md:text-center">
-                                    <p class="text-[10px] font-bold text-gray-600">お電話で相談</p>
-                                    <p class="text-lg font-black text-gray-800">080-3555-7226</p>
-                                </div>
-                            </a>
-                            <a href="https://lin.ee/jtCaPLIi" class="flex flex-row md:flex-col items-center justify-center bg-line-green text-white p-4 rounded-xl cta-button shadow-sm">
-                                <i class="fab fa-line text-3xl md:mb-2 mr-4 md:mr-0"></i>
-                                <div class="text-left md:text-center">
-                                    <p class="text-[10px] font-bold opacity-90">写真を送るだけ</p>
-                                    <p class="text-lg font-black">LINEで無料見積もり</p>
-                                </div>
-                            </a>
-                            <a href="#contact" class="flex flex-row md:flex-col items-center justify-center bg-sub-blue text-white p-4 rounded-xl cta-button shadow-sm">
-                                <i class="fas fa-envelope text-2xl md:mb-2 mr-4 md:mr-0"></i>
-                                <div class="text-left md:text-center">
-                                    <p class="text-[10px] font-bold opacity-90">1分で入力</p>
-                                    <p class="text-lg font-black">WEBお申し込み</p>
-                                </div>
-                            </a>
-                        </div>
-                        <p class="text-center text-[10px] md:text-xs text-gray-400 mt-4">※深夜・早朝もお気軽にご相談ください</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                        <!-- 電話 -->
+                        <a href="tel:0120546207" class="shine-effect flex flex-row md:flex-col items-center justify-center bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 p-4 rounded-2xl cta-button shadow-md border border-yellow-200">
+                            <i class="fas fa-phone-alt text-2xl md:text-3xl md:mb-1 mr-4 md:mr-0 text-red-600 animate-pulse"></i>
+                            <div class="text-left md:text-center">
+                                <p class="text-[10px] font-bold text-slate-800">【無料】お電話で相談</p>
+                                <p class="text-xl md:text-2xl font-black text-slate-950">0120-546-207</p>
+                            </div>
+                        </a>
+                        <!-- LINE -->
+                        <a href="https://lin.ee/jtCaPLIi" class="flex flex-row md:flex-col items-center justify-center bg-line-green text-white p-4 rounded-2xl cta-button shadow-md">
+                            <i class="fab fa-line text-3xl md:text-4xl md:mb-1 mr-4 md:mr-0"></i>
+                            <div class="text-left md:text-center">
+                                <p class="text-[10px] font-bold opacity-90">写真を送るだけ</p>
+                                <p class="text-lg font-black">LINEで無料見積もり</p>
+                            </div>
+                        </a>
+                        <!-- WEB -->
+                        <a href="#contact" class="flex flex-row md:flex-col items-center justify-center bg-gradient-to-r from-sky-600 to-blue-700 text-white p-4 rounded-2xl cta-button shadow-md">
+                            <i class="fas fa-envelope text-2xl md:text-3xl md:mb-1 mr-4 md:mr-0 text-amber-300"></i>
+                            <div class="text-left md:text-center">
+                                <p class="text-[10px] font-bold opacity-90">1分で簡単入力</p>
+                                <p class="text-lg font-black">WEBお申し込み</p>
+                            </div>
+                        </a>
                     </div>
+                    <p class="text-center text-[10px] md:text-xs text-slate-500 mt-4">※ご相談・現地調査・お見積もりは完全無料です。お気軽にお問い合わせください。</p>
                 </div>
             </div>
         </section>
 
         <!-- 選ばれる理由 -->
-        <section id="reasons" class="py-16 md:py-24 bg-light-blue overflow-hidden">
+        <section id="reasons" class="py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="section-title scroll-animate">
-                    <span>TRUSTED SERVICE</span>
-                    センタービレッジが<br class="md:hidden">選ばれる3つの強み
+                    <span>TRUSTED REASONS</span>
+                    センタービレッジが選ばれる<span class="text-sky-600">3つの強み</span>
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-                    <div class="bg-white p-8 rounded-3xl shadow-md relative scroll-animate">
-                        <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-main-blue text-white rounded-full flex items-center justify-center font-black text-lg shadow-md">1</div>
-                        <div class="text-center mb-5 mt-3">
-                            <i class="fas fa-coins text-4xl text-amber-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-center sub-blue">地域最安値への挑戦</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">リサイクル徹底と自社運用の工夫で低価格を実現. 他社見積もり後のご相談も歓迎です。</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- 強み 1 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative scroll-animate hover:shadow-md transition-shadow">
+                        <div class="absolute -top-5 left-8 w-10 h-10 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black rounded-full flex items-center justify-center text-lg shadow">1</div>
+                        <div class="text-amber-500 text-4xl mb-4 text-center"><i class="fas fa-yen-sign"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-center text-slate-900">地域最安値への挑戦</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">独自の再資源化ルートと効率運営により低価格を実現。他社様の見積もり後のご相談も大歓迎です！</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-md relative scroll-animate" style="transition-delay: 0.1s;">
-                        <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-main-blue text-white rounded-full flex items-center justify-center font-black text-lg shadow-md">2</div>
-                        <div class="text-center mb-5 mt-3">
-                            <i class="fas fa-bolt text-4xl text-amber-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-center sub-blue">最短即日のスピード対応</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">埼玉県内を巡回中のスタッフが最短30分で急行. お急ぎの片付けも柔軟に対応します。</p>
+
+                    <!-- 強み 2 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative scroll-animate hover:shadow-md transition-shadow" style="transition-delay: 0.1s;">
+                        <div class="absolute -top-5 left-8 w-10 h-10 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black rounded-full flex items-center justify-center text-lg shadow">2</div>
+                        <div class="text-amber-500 text-4xl mb-4 text-center"><i class="fas fa-bolt"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-center text-slate-900">最短30分のスピード対応</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">埼玉県・関東エリアを多数のトラックが巡回中。緊急のお片付け・当日回収も迅速に対応いたします。</p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-md relative scroll-animate" style="transition-delay: 0.2s;">
-                        <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-main-blue text-white rounded-full flex items-center justify-center font-black text-lg shadow-md">3</div>
-                        <div class="text-center mb-5 mt-3">
-                            <i class="fas fa-medal text-4xl text-amber-400"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-center sub-blue">プロによる丁寧な作業</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">経験豊富なベテランが、家屋を傷つけないよう養生を徹底. 分別・清掃まで丸ごとお任せ。</p>
+
+                    <!-- 強み 3 -->
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm relative scroll-animate hover:shadow-md transition-shadow" style="transition-delay: 0.2s;">
+                        <div class="absolute -top-5 left-8 w-10 h-10 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black rounded-full flex items-center justify-center text-lg shadow">3</div>
+                        <div class="text-amber-500 text-4xl mb-4 text-center"><i class="fas fa-user-shield"></i></div>
+                        <h3 class="text-xl font-bold mb-3 text-center text-slate-900">経験豊富なプロの丁寧作業</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">徹底した養生で大切な家屋を守ります。分別から清掃、買い取り査定までワンストップでお任せください。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 作業実績 -->
-        <section id="works" class="py-16 md:py-24 bg-white">
+        <!-- 作業実績 (Before & After) -->
+        <section id="works" class="py-16 md:py-20 bg-sky-50/60 border-t border-b border-sky-100">
             <div class="container mx-auto px-4">
                 <h2 class="section-title scroll-animate">
                     <span>BEFORE & AFTER</span>
                     お部屋の劇的ビフォーアフター
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 scroll-animate">
-                        <div class="p-4 bg-sub-blue text-white text-center font-bold text-sm">
-                            羽生市：ゴミ屋敷・不用品一掃
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Case 01 -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md scroll-animate">
+                        <div class="bg-gradient-to-r from-sky-700 to-blue-800 p-3.5 text-center text-white font-bold text-sm">
+                            羽生市：ゴミ屋敷・不用品一掃作業
                         </div>
                         <div class="flex">
-                            <div class="relative w-1/2 border-r border-white">
+                            <div class="relative w-1/2 border-r border-slate-200">
                                 <img src="before_NO1.jpg" alt="作業前" class="w-full aspect-[4/3] object-cover">
-                                <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-0.5 font-bold rounded-sm">Before</span>
+                                <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-0.5 font-black rounded shadow">Before</span>
                             </div>
                             <div class="relative w-1/2">
                                 <img src="after_NO1.jpg" alt="作業後" class="w-full aspect-[4/3] object-cover">
-                                <span class="absolute top-2 left-2 bg-green-600 text-white text-[10px] px-2 py-0.5 font-bold rounded-sm">After</span>
+                                <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] px-2 py-0.5 font-black rounded shadow">After</span>
                             </div>
                         </div>
-                        <div class="p-5 flex justify-between items-center bg-gray-50">
+                        <div class="p-5 flex justify-between items-center bg-white">
                             <div>
-                                <p class="text-[10px] text-gray-500 mb-1">作業時間：約4時間</p>
-                                <p class="text-base font-black main-blue">参考価格：25,000円〜</p>
+                                <p class="text-xs text-slate-500 mb-1">作業時間：約4時間</p>
+                                <p class="text-lg font-black text-sky-700">参考価格：25,000円〜</p>
                             </div>
-                            <div class="text-[10px] font-bold text-gray-400 italic">Case 01</div>
+                            <span class="text-xs font-bold text-slate-400">Case 01</span>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 scroll-animate" style="transition-delay: 0.1s;">
-                        <div class="p-4 bg-sub-blue text-white text-center font-bold text-sm">
-                            さいたま市：生前整理・家財回収
+
+                    <!-- Case 02 -->
+                    <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md scroll-animate" style="transition-delay: 0.1s;">
+                        <div class="bg-gradient-to-r from-sky-700 to-blue-800 p-3.5 text-center text-white font-bold text-sm">
+                            さいたま市：生前整理・家財一括回収
                         </div>
                         <div class="flex">
-                            <div class="relative w-1/2 border-r border-white">
+                            <div class="relative w-1/2 border-r border-slate-200">
                                 <img src="before_NO2.jpg" alt="作業前" class="w-full aspect-[4/3] object-cover">
-                                <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-0.5 font-bold rounded-sm">Before</span>
+                                <span class="absolute top-2 left-2 bg-red-600 text-white text-[10px] px-2 py-0.5 font-black rounded shadow">Before</span>
                             </div>
                             <div class="relative w-1/2">
                                 <img src="after_NO2.jpg" alt="作業後" class="w-full aspect-[4/3] object-cover">
-                                <span class="absolute top-2 left-2 bg-green-600 text-white text-[10px] px-2 py-0.5 font-bold rounded-sm">After</span>
+                                <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] px-2 py-0.5 font-black rounded shadow">After</span>
                             </div>
                         </div>
-                        <div class="p-5 flex justify-between items-center bg-gray-50">
+                        <div class="p-5 flex justify-between items-center bg-white">
                             <div>
-                                <p class="text-[10px] text-gray-500 mb-1">作業時間：約3時間</p>
-                                <p class="text-base font-black main-blue">参考価格：20,000円〜</p>
+                                <p class="text-xs text-slate-500 mb-1">作業時間：約3時間</p>
+                                <p class="text-lg font-black text-sky-700">参考価格：20,000円〜</p>
                             </div>
-                            <div class="text-[10px] font-bold text-gray-400 italic">Case 02</div>
+                            <span class="text-xs font-bold text-slate-400">Case 02</span>
                         </div>
                     </div>
                 </div>
@@ -344,147 +385,115 @@
         </section>
 
         <!-- 料金プラン -->
-        <section id="pricing" class="py-16 md:py-24 bg-light-blue">
+        <section id="pricing" class="py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="section-title scroll-animate">
                     <span>PRICING PLAN</span>
-                    選べる3つの定額安心パック
+                    選べる定額安心パック
                 </h2>
+
                 <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Pack 1 -->
-                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100 flex flex-col scroll-animate">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-gray-100 text-gray-600 text-[10px] font-black px-3 py-1 rounded-full">少量・整理</div>
-                            <i class="fas fa-truck text-main-blue opacity-20 text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-black mb-1 sub-blue">軽トラパック</h3>
-                        <p class="text-[10px] text-gray-400 mb-4 tracking-tighter">1K・一人暮らしのお片付けに</p>
+                    <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col scroll-animate">
+                        <div class="bg-sky-100 text-sky-800 text-[10px] font-black px-3 py-1 rounded-full w-max mb-3">少量のお片付けに</div>
+                        <h3 class="text-xl font-black text-slate-900 mb-1">軽トラパック</h3>
+                        <p class="text-xs text-slate-500 mb-4">1K・一人暮らしのお部屋整理に</p>
                         
-                        <div class="flex items-baseline mb-6 border-b border-gray-50 pb-4">
-                            <span class="text-3xl font-black text-gray-800 tracking-tighter">¥8,000</span>
-                            <span class="text-sm font-bold ml-1 text-gray-400">〜(税込)</span>
+                        <div class="mb-6 pb-4 border-b border-slate-200">
+                            <span class="text-3xl font-black text-sky-700">¥8,000</span>
+                            <span class="text-xs text-slate-500">〜(税込)</span>
                         </div>
                         
-                        <div class="space-y-4 flex-grow">
-                            <div class="bg-light-blue p-3 rounded-xl">
-                                <p class="text-[10px] font-bold text-main-blue mb-1">積み込み目安</p>
-                                <p class="text-xs text-gray-600 leading-tight italic">衣装ケース約10〜15個分相当の荷物量. 家電数点もOK！</p>
-                            </div>
-                            <ul class="text-xs text-gray-600 space-y-2.5">
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>搬出作業費</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>車両・燃料費</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>リサイクル料金込</li>
-                            </ul>
-                        </div>
+                        <ul class="text-xs text-slate-700 space-y-3 flex-grow">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>搬出作業費コミコミ</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>車両・燃料費込</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>家電数点＋粗大ごみ</li>
+                        </ul>
                     </div>
 
-                    <!-- Pack 2 - Most Popular -->
-                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-2 border-main-blue flex flex-col relative scale-100 md:scale-105 z-10 scroll-animate">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-main-blue text-white text-[10px] font-black px-6 py-1.5 rounded-full shadow-lg">
+                    <!-- Pack 2 (一番人気) -->
+                    <div class="bg-white rounded-3xl p-6 shadow-xl border-2 border-amber-400 flex flex-col relative scale-100 md:scale-105 z-10 scroll-animate">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 text-xs font-black px-6 py-1 rounded-full shadow-md">
                             一番選ばれています！
                         </div>
-                        <div class="flex justify-between items-start mb-4 mt-2">
-                            <div class="bg-blue-50 text-main-blue text-[10px] font-black px-3 py-1 rounded-full">お部屋丸ごと</div>
-                            <i class="fas fa-truck-moving text-main-blue opacity-40 text-4xl"></i>
-                        </div>
-                        <h3 class="text-xl font-black mb-1 sub-blue">2t平車パック</h3>
-                        <p class="text-[10px] text-gray-400 mb-4 tracking-tighter">1LDK・2Kのお部屋を丸ごと清掃</p>
+                        <div class="bg-amber-100 text-amber-900 text-[10px] font-black px-3 py-1 rounded-full w-max mb-3 mt-2">お部屋丸ごと</div>
+                        <h3 class="text-2xl font-black text-slate-900 mb-1">2t平車パック</h3>
+                        <p class="text-xs text-slate-500 mb-4">1LDK・2Kのお部屋を一括清掃</p>
                         
-                        <div class="flex items-baseline mb-6 border-b border-gray-50 pb-4">
-                            <span class="text-4xl font-black text-gray-800 tracking-tighter">¥15,000</span>
-                            <span class="text-sm font-bold ml-1 text-gray-400">〜(税込)</span>
+                        <div class="mb-6 pb-4 border-b border-amber-200">
+                            <span class="text-4xl font-black text-amber-600">¥15,000</span>
+                            <span class="text-xs text-slate-500">〜(税込)</span>
                         </div>
                         
-                        <div class="space-y-4 flex-grow">
-                            <div class="bg-blue-50 p-3 rounded-xl">
-                                <p class="text-[10px] font-bold text-main-blue mb-1">積み込み目安</p>
-                                <p class="text-xs text-gray-600 leading-tight italic font-bold">軽トラ約2.5台分の特大ボリューム！大型家具・家電一式。</p>
-                            </div>
-                            <ul class="text-xs text-gray-600 space-y-2.5">
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>2名体制での迅速搬出</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>お部屋の簡易清掃付</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>エアコン取り外し無料</li>
-                            </ul>
-                        </div>
+                        <ul class="text-xs text-slate-800 space-y-3 flex-grow font-bold">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-2"></i>軽トラ約2.5台分の特大容量</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-2"></i>2名体制でスピーディ搬出</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-amber-500 mr-2"></i>エアコン取り外し対応可</li>
+                        </ul>
                     </div>
 
                     <!-- Pack 3 -->
-                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100 flex flex-col scroll-animate">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="bg-gray-100 text-gray-600 text-[10px] font-black px-3 py-1 rounded-full">一軒家・特大</div>
-                            <i class="fas fa-warehouse text-main-blue opacity-20 text-3xl"></i>
-                        </div>
-                        <h3 class="text-xl font-black mb-1 sub-blue">2t箱車パック</h3>
-                        <p class="text-[10px] text-gray-400 mb-4 tracking-tighter">2LDK以上・ゴミ屋敷の解決に</p>
+                    <div class="bg-slate-50 rounded-3xl p-6 shadow-sm border border-slate-200 flex flex-col scroll-animate">
+                        <div class="bg-sky-100 text-sky-800 text-[10px] font-black px-3 py-1 rounded-full w-max mb-3">一軒家・ゴミ屋敷</div>
+                        <h3 class="text-xl font-black text-slate-900 mb-1">2t箱車パック</h3>
+                        <p class="text-xs text-slate-500 mb-4">2LDK以上・家全体の整理に</p>
                         
-                        <div class="flex items-baseline mb-6 border-b border-gray-50 pb-4">
-                            <span class="text-3xl font-black text-gray-800 tracking-tighter">¥40,000</span>
-                            <span class="text-sm font-bold ml-1 text-gray-400">〜(税込)</span>
+                        <div class="mb-6 pb-4 border-b border-slate-200">
+                            <span class="text-3xl font-black text-sky-700">¥40,000</span>
+                            <span class="text-xs text-slate-500">〜(税込)</span>
                         </div>
                         
-                        <div class="space-y-4 flex-grow">
-                            <div class="bg-light-blue p-3 rounded-xl">
-                                <p class="text-[10px] font-bold text-main-blue mb-1">積み込み目安</p>
-                                <p class="text-xs text-gray-600 leading-tight italic">3トントラック相当の収納力. 家全体の整理や大型片付けに。</p>
-                            </div>
-                            <ul class="text-xs text-gray-600 space-y-2.5">
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>ベテランスタッフによる仕分け</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>高価買取・相殺OK</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle main-blue mr-2"></i>近隣配慮・秘密厳守</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="max-w-2xl mx-auto mt-12 bg-gray-50 rounded-2xl p-4 md:p-6 text-center scroll-animate">
-                    <p class="text-sm font-bold sub-blue mb-2">全プラン共通サービス</p>
-                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] md:text-xs text-gray-500">
-                        <span><i class="fas fa-check main-blue mr-1"></i>お見積り0円</span>
-                        <span><i class="fas fa-check main-blue mr-1"></i>分別不要</span>
-                        <span><i class="fas fa-check main-blue mr-1"></i>追加料金なし</span>
-                        <span><i class="fas fa-check main-blue mr-1"></i>土日祝OK</span>
+                        <ul class="text-xs text-slate-700 space-y-3 flex-grow">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>大量の足の踏み場もない部屋対応</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>高価買取相殺OK</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-sky-600 mr-2"></i>近隣配慮・秘密厳守</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- よくある質問 -->
-        <section id="faq" class="py-16 md:py-24 bg-white">
+        <section id="faq" class="py-16 md:py-20 bg-sky-50/50">
             <div class="container mx-auto px-4 max-w-3xl">
                 <h2 class="section-title scroll-animate">
                     <span>Q & A</span>
                     よくあるご質問
                 </h2>
-                <div class="space-y-3">
-                    <div class="border border-gray-100 rounded-xl overflow-hidden shadow-sm scroll-animate">
-                        <button class="faq-toggle w-full flex items-center justify-between p-5 bg-white text-left transition-colors">
-                            <span class="font-bold sub-blue text-sm md:text-base"><span class="main-blue mr-2">Q.</span>当日に追加料金が発生しますか？</span>
-                            <i class="fas fa-plus main-blue text-xs transition-transform duration-300"></i>
+
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm scroll-animate">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left text-slate-900 font-bold text-sm md:text-base">
+                            <span><span class="text-sky-600 mr-2">Q.</span>当日に追加料金が発生することはありますか？</span>
+                            <i class="fas fa-plus text-sky-600 text-xs transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content bg-light-blue">
-                            <div class="p-5 text-sm text-gray-600 leading-relaxed border-t border-white">
-                                お見積もり金額から、当日の作業内容に変更がない限り、追加料金を頂くことはございません. ご安心ください。
+                        <div class="faq-content bg-slate-50">
+                            <div class="p-5 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                事前に確定したお見積もり金額から、当日お客様より追加の回収依頼がない限り、追加費用が発生することは一切ございません。
                             </div>
                         </div>
                     </div>
-                    <div class="border border-gray-100 rounded-xl overflow-hidden shadow-sm scroll-animate">
-                        <button class="faq-toggle w-full flex items-center justify-between p-5 bg-white text-left transition-colors">
-                            <span class="font-bold sub-blue text-sm md:text-base"><span class="main-blue mr-2">Q.</span>夜間や早朝でも大丈夫ですか？</span>
-                            <i class="fas fa-plus main-blue text-xs transition-transform duration-300"></i>
+
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm scroll-animate">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left text-slate-900 font-bold text-sm md:text-base">
+                            <span><span class="text-sky-600 mr-2">Q.</span>夜間や早朝の作業にも対応してもらえますか？</span>
+                            <i class="fas fa-plus text-sky-600 text-xs transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content bg-light-blue">
-                            <div class="p-5 text-sm text-gray-600 leading-relaxed border-t border-white">
-                                はい、24時間365日対応しております. 近隣の方への配慮として静音作業も徹底しております。
+                        <div class="faq-content bg-slate-50">
+                            <div class="p-5 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                はい、24時間365日いつでも対応可能です。近隣の方へご迷惑がかからないよう静音作業も実施いたします。
                             </div>
                         </div>
                     </div>
-                    <div class="border border-gray-100 rounded-xl overflow-hidden shadow-sm scroll-animate">
-                        <button class="faq-toggle w-full flex items-center justify-between p-5 bg-white text-left transition-colors">
-                            <span class="font-bold sub-blue text-sm md:text-base"><span class="main-blue mr-2">Q.</span>買取も可能ですか？</span>
-                            <i class="fas fa-plus main-blue text-xs transition-transform duration-300"></i>
+
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm scroll-animate">
+                        <button class="faq-toggle w-full flex items-center justify-between p-5 text-left text-slate-900 font-bold text-sm md:text-base">
+                            <span><span class="text-sky-600 mr-2">Q.</span>不用品の買い取りは可能ですか？</span>
+                            <i class="fas fa-plus text-sky-600 text-xs transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content bg-light-blue">
-                            <div class="p-5 text-sm text-gray-600 leading-relaxed border-t border-white">
-                                はい、対応しております. 年式の新しい家電やブランド家具などは査定し、作業費用からお値引きさせていただきます。
+                        <div class="faq-content bg-slate-50">
+                            <div class="p-5 text-xs md:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                                はい！高価買取を行っております。年式の新しい家電製品や家具類は査定し、作業費用からお値引きいたします。
                             </div>
                         </div>
                     </div>
@@ -493,32 +502,32 @@
         </section>
 
         <!-- お問い合わせフォーム -->
-        <section id="contact" class="py-16 md:py-24 bg-sub-blue text-white">
+        <section id="contact" class="py-16 md:py-20 bg-gradient-to-b from-sky-900 to-slate-900 text-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-10">
                     <h2 class="text-2xl md:text-4xl font-black mb-3">無料お見積もりフォーム</h2>
-                    <p class="text-blue-200 text-sm">24時間以内に専門スタッフが回答します</p>
+                    <p class="text-sky-200 text-xs md:text-sm">24時間以内に専門スタッフよりご連絡させていただきます</p>
                 </div>
 
-                <div class="max-w-xl mx-auto bg-white text-gray-800 rounded-2xl shadow-2xl p-6 md:p-10">
+                <div class="max-w-xl mx-auto bg-white text-slate-800 rounded-3xl shadow-2xl p-6 md:p-10 border border-slate-100">
                     <form action="https://formspree.io/f/myzprnyd" method="POST" id="contact-form" class="space-y-5">
                         <div>
-                            <label class="block text-xs font-bold mb-2 text-gray-500 tracking-wider uppercase">お名前 <span class="text-red-500 ml-1">必須</span></label>
-                            <input type="text" name="name" placeholder="例：田中 太郎" required class="w-full bg-gray-50 border border-gray-100 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-main-blue transition-all">
+                            <label class="block text-xs font-bold mb-2 text-slate-600">お名前 <span class="text-red-500 ml-1">必須</span></label>
+                            <input type="text" name="name" placeholder="例：山田 太郎" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:border-sky-500 transition-all">
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label class="block text-xs font-bold mb-2 text-gray-500 tracking-wider uppercase">電話番号 <span class="text-red-500 ml-1">必須</span></label>
-                                <input type="tel" name="phone" placeholder="例：09012345678" required class="w-full bg-gray-50 border border-gray-100 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-main-blue transition-all">
+                                <label class="block text-xs font-bold mb-2 text-slate-600">電話番号 <span class="text-red-500 ml-1">必須</span></label>
+                                <input type="tel" name="phone" placeholder="例：09012345678" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:border-sky-500 transition-all">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold mb-2 text-gray-500 tracking-wider uppercase">メールアドレス</label>
-                                <input type="email" name="email" placeholder="例：test@example.com" class="w-full bg-gray-50 border border-gray-100 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-main-blue transition-all">
+                                <label class="block text-xs font-bold mb-2 text-slate-600">メールアドレス</label>
+                                <input type="email" name="email" placeholder="例：info@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:border-sky-500 transition-all">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold mb-2 text-gray-500 tracking-wider uppercase">ご相談内容 <span class="text-red-500 ml-1">必須</span></label>
-                            <textarea name="message" rows="4" placeholder="例：引っ越しに伴う不用品回収を依頼したい。最短でいつ頃来れますか？" required class="w-full bg-gray-50 border border-gray-100 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-main-blue transition-all"></textarea>
+                            <label class="block text-xs font-bold mb-2 text-slate-600">ご相談内容 <span class="text-red-500 ml-1">必須</span></label>
+                            <textarea name="message" rows="4" placeholder="例：ゴミ屋敷のお部屋の片付けをお願いしたいです。見積もりをお願いできますか？" required class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm text-slate-900 focus:outline-none focus:border-sky-500 transition-all"></textarea>
                         </div>
                         
                         <!-- reCAPTCHA -->
@@ -526,34 +535,31 @@
                         <input type="hidden" name="_next" value="https://cv-osouji.github.io/cv/thanks.html">
                         <input type="text" name="_gotcha" style="display:none">
 
-                        <button type="submit" class="w-full bg-main-blue hover:bg-blue-600 text-white font-black py-5 rounded-xl shadow-lg transition-all text-base md:text-lg">
+                        <button type="submit" class="w-full bg-gradient-to-r from-red-600 via-red-500 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-black py-5 rounded-2xl shadow-xl transition-all text-base md:text-lg tracking-wider">
                             無料で相談・見積もりする
                         </button>
                     </form>
-                    <p class="text-[9px] text-gray-400 mt-6 text-center leading-relaxed">ご入力いただいた情報は、お問い合わせへの回答以外には使用いたしません。</p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- フッター -->
-    <footer class="bg-gray-900 text-white py-12 pb-28 md:pb-12">
+    <footer class="bg-slate-950 text-slate-400 py-12 pb-28 md:pb-12 border-t border-slate-900">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center border-b border-gray-800 pb-10 mb-8">
-                <div class="mb-8 md:mb-0 text-center md:text-left">
-                    <!-- 白いボックスを削除し、ロゴのみを配置 -->
-                    <img src="centervillage_h-logo.svg" alt="ロゴ" class="h-10 w-auto mb-5 mx-auto md:mx-0">
-                    <p class="text-sm font-bold">（株）NHホールディングス</p>
-                    <p class="text-[10px] text-gray-500 mt-1">〒348-0053 埼玉県羽生市南7-19-11</p>
-                    <p class="text-[10px] text-gray-500">TEL：080-3555-7226 / FAX：048-561-3369</p>
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8 mb-6">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <img src="centervillage_h-logo.svg" alt="ロゴ" class="h-9 w-auto mb-3 mx-auto md:mx-0">
+                    <p class="text-xs font-bold text-slate-300">（株）NHホールディングス</p>
+                    <p class="text-[10px] text-slate-500 mt-1">〒348-0053 埼玉県羽生市南7-19-11</p>
+                    <p class="text-[10px] text-slate-500">TEL：0120-546-207 / FAX：048-561-3369</p>
                 </div>
-                <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
-                    <a href="./company.html" class="hover:text-main-blue">会社概要</a>
-                    <a href="./privacy.html" class="hover:text-main-blue">プライバシーポリシー</a>
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400">
+                    <a href="./company.html" class="hover:text-amber-400">会社概要</a>
+                    <a href="./privacy.html" class="hover:text-amber-400">プライバシーポリシー</a>
                 </div>
             </div>
-            <div class="text-center text-[9px] text-gray-600 leading-relaxed">
-                <p class="mb-2">※満足度97.3%：2024年1–6月 自社アンケート（n=154）において5段階評価の4以上を回答した割合。<br class="md:hidden">※年間実績3,000件：当社グループの年間対応件数（作業記録ベース）。</p>
+            <div class="text-center text-[9px] text-slate-600">
                 <p>&copy; 2024 NH Holdings Corp. All Rights Reserved.</p>
             </div>
         </div>
@@ -561,13 +567,13 @@
 
     <!-- スマホ専用固定CTAフッター -->
     <div class="mobile-floating-cta lg:hidden">
-        <a href="https://lin.ee/jtCaPLIi" class="flex-1 bg-line-green text-white py-3 rounded-lg font-black flex flex-col items-center justify-center shadow-md">
-            <span class="text-[9px] mb-0.5 opacity-90 font-bold">最短1分！写真査定</span>
-            <span class="text-sm"><i class="fab fa-line mr-1 text-base"></i>LINE相談</span>
+        <a href="https://lin.ee/jtCaPLIi" class="flex-1 bg-line-green text-white py-2.5 rounded-xl font-black flex flex-col items-center justify-center shadow-md">
+            <span class="text-[9px] opacity-90">写真でカンタン査定</span>
+            <span class="text-xs"><i class="fab fa-line mr-1 text-sm"></i>LINE相談</span>
         </a>
-        <a href="tel:08035557226" class="flex-1 bg-accent-yellow text-gray-800 py-3 rounded-lg font-black flex flex-col items-center justify-center shadow-md">
-            <span class="text-[9px] mb-0.5 text-gray-600 font-bold">今すぐ電話で相談</span>
-            <span class="text-sm"><i class="fas fa-phone-alt mr-1 text-base"></i>無料電話</span>
+        <a href="tel:0120546207" class="flex-1 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 py-2.5 rounded-xl font-black flex flex-col items-center justify-center shadow-md border border-yellow-200">
+            <span class="text-[9px] text-slate-800">【通話料無料】24時間受付</span>
+            <span class="text-xs text-slate-950"><i class="fas fa-phone-alt text-red-600 mr-1 text-sm"></i>0120-546-207</span>
         </a>
     </div>
 
@@ -603,7 +609,6 @@
 
         const toggleMenu = () => {
             mobileMenu.classList.toggle('hidden');
-            // メニューが開いているときは背景のスクロールを止める
             if (!mobileMenu.classList.contains('hidden')) {
                 document.body.style.overflow = 'hidden';
             } else {
@@ -628,7 +633,7 @@
                 } else {
                     document.querySelectorAll('.faq-content').forEach(other => {
                         other.style.maxHeight = null;
-                        other.previousElementSibling.querySelector('i').className = 'fas fa-plus main-blue text-xs transition-transform duration-300';
+                        other.previousElementSibling.querySelector('i').className = 'fas fa-plus text-sky-600 text-xs transition-transform duration-300';
                     });
                     
                     content.style.maxHeight = content.scrollHeight + "px";
@@ -638,7 +643,7 @@
             });
         });
 
-        // Intersection Observer for scroll animations
+        // Scroll Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
