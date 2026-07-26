@@ -672,5 +672,49 @@
             }
         });
     </script>
+
+<script>
+  // Google広告：電話クリックのコンバージョン計測
+  function reportPhoneConversion() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17498401530/9fUnCInamL8cEPrV8ZdB',
+        'value': 1.0,
+        'currency': 'JPY'
+      });
+    }
+  }
+
+  // 電話リンクをすべて自動計測
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+    link.addEventListener('click', reportPhoneConversion);
+  });
+
+  // LINEクリックはGoogle Ads用ラベル未発行のため、
+  // 現時点では内部イベント名だけ記録します。
+  document.querySelectorAll('a[href*="lin.ee"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'line_click', {
+          'link_url': link.href
+        });
+      }
+    });
+  });
+
+  // フォーム送信操作を内部イベント名で記録します。
+  // 実際のGoogle Adsコンバージョンは thanks.html の表示で設定するのが確実です。
+  const contactFormForTracking = document.getElementById('contact-form');
+  if (contactFormForTracking) {
+    contactFormForTracking.addEventListener('submit', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit_attempt', {
+          'form_id': 'contact-form'
+        });
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
